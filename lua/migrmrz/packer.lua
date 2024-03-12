@@ -15,14 +15,6 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use ({
-	'rose-pine/neovim',
-	as = 'rose-pine',
-	config = function()
-		vim.cmd('colorscheme rose-pine')
-	end
-  })
-
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
@@ -46,11 +38,28 @@ return require('packer').startup(function(use)
 
   use {"catppuccin/nvim", as = "catppuccin" }
 
+  use 'nvim-tree/nvim-web-devicons'
+
   use { "fatih/vim-go" }
 
   use {
       'nvim-lualine/lualine.nvim',
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+
+  use({
+      "jackMort/ChatGPT.nvim",
+      config = function()
+          require("chatgpt").setup({
+              api_key_cmd = "op read op://Personal/OpenAI/credential --no-newline"
+          })
+      end,
+      requires = {
+          "MunifTanjim/nui.nvim",
+          "nvim-lua/plenary.nvim",
+          "folke/trouble.nvim",
+          "nvim-telescope/telescope.nvim"
+      }
+  })
 
 end)
