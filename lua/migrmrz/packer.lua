@@ -50,9 +50,7 @@ return require('packer').startup(function(use)
   use({
       "jackMort/ChatGPT.nvim",
       config = function()
-          require("chatgpt").setup({
-              api_key_cmd = "op read op://Personal/OpenAI/credential --no-newline"
-          })
+          require("chatgpt").setup()
       end,
       requires = {
           "MunifTanjim/nui.nvim",
