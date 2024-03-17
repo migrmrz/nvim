@@ -1,6 +1,9 @@
 ## Plugin manager
 
-Packer
+Lazy
+
+### How to open
+`:Lazy`
 
 ## Plugin list
 
