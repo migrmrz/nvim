@@ -45,6 +45,7 @@ vim.opt.updatetime = 50
 
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("v", "<leader>y", '"+y')
 
 require("lazy").setup('plugins')
 
