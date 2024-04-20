@@ -47,5 +47,8 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("v", "<leader>y", '"+y')
 
+-- Set working directory for telescope when :lcd
+-- vim.cmd([[autocmd BufEnter * execute 'lcd ' .. vim.fn.expand('%:p:h')]])
+
 require("lazy").setup('plugins')
 
