@@ -48,8 +48,17 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("v", "<leader>y", '"+y')
 
--- Set working directory for telescope when :lcd
--- vim.cmd([[autocmd BufEnter * execute 'lcd ' .. vim.fn.expand('%:p:h')]])
+-- highlight yanked text for 150ms using the "Visual" highlight group
+vim.cmd[[
+augroup highlight_yank
+autocmd!
+au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=150})
+augroup END
+]]
+
+-- [ Quickfix ]
+vim.keymap.set("n", "<C-<>", "<cmd>cprev<CR>")
+vim.keymap.set("n", "<C->>", "<cmd>cnext<CR>")
 
 require("lazy").setup('plugins')
 
