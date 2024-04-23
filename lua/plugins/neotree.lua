@@ -8,6 +8,6 @@ return {
     -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
   },
   config = function()
-    vim.keymap.set('n', '<C-t>', ':Neotree<CR>')
+    vim.keymap.set('n', '<leader>et', '<cmd>Neotree<CR>')
   end,
 }
