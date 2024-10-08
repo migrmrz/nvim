@@ -23,5 +23,8 @@ Lazy
 ### Go
 - [fatih/vim-go](https://github.com/fatih/vim-go)
 
+### Markdown
+- [OXY2DEV/markview.nvim](https://github.com/OXY2DEV/markview.nvim)
+
 ### AI
 - [jackMort/ChatGPT.nvim](https://github.com/jackMort/ChatGPT.nvim)
