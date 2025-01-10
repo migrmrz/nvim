@@ -34,5 +34,8 @@ return {
     vim.keymap.set('n', '<F11>', dap.step_into, {})
     vim.keymap.set('n', '<F12>', dap.step_out, {})
     vim.keymap.set('n', '<leader>dt', dap.toggle_breakpoint, {})
+    vim.keymap.set('n', '<leader>dc', function()
+      dap.set_breakpoint(vim.fn.input('Breakpoint condition: '))
+    end, {})
   end
 }

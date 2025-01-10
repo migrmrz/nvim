@@ -43,7 +43,6 @@ return {
         'html',
         'jsonls',
         'biome',
-        'tsserver',
         'jedi_language_server',
         'pyre',
         'pyright',
