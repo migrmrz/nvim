@@ -1,3 +1,4 @@
 return {
-  'github/copilot.vim'
+  -- Copilot plugin disabled
+  -- 'github/copilot.vim'
 }

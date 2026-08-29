@@ -57,8 +57,16 @@ augroup END
 ]]
 
 -- [ Quickfix ]
-vim.keymap.set("n", "<C-<>", "<cmd>cprev<CR>")
-vim.keymap.set("n", "<C->>", "<cmd>cnext<CR>")
+vim.keymap.set("n", "<C-,>", "<cmd>cprev<CR>")
+vim.keymap.set("n", "<C-.>", "<cmd>cnext<CR>")
+
+-- [ Go Environment Setup ]
+-- Fix Go permission issues by setting GOTMPDIR to a user-writable location
+local go_tmpdir = os.getenv("HOME") .. "/.tmp/go-tmp"
+if vim.fn.isdirectory(go_tmpdir) == 0 then
+  vim.fn.mkdir(go_tmpdir, "p")
+end
+vim.env.GOTMPDIR = go_tmpdir
 
 -- [ Go Formatting ]
 -- Run gofmt + goimports on save
