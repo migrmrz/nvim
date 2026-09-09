@@ -14,6 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 
 -- [ Basic keymaps ]
 vim.opt.guicursor = ""
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
